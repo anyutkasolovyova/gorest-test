@@ -58,7 +58,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Harry Potter \",\n    \"email\": \"prisonerofazkaban@example.com\",\n    \"gender\": \"male\",\n    \"status\": \"active\"\n}",
+							"raw": "{\n    \"name\": \"Harry Potter\",\n    \"email\": \"chamberofsecrets@example.com\",\n    \"gender\": \"male\",\n    \"status\": \"active\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -173,7 +173,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://gorest.co.in/public/v2/users/6881835",
+							"raw": "https://gorest.co.in/public/v2/users/6883527",
 							"protocol": "https",
 							"host": [
 								"gorest",
@@ -184,7 +184,7 @@
 								"public",
 								"v2",
 								"users",
-								"6881835"
+								"6883527"
 							]
 						}
 					},
@@ -277,7 +277,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Hermione Granger\",\n    \"email\": \"hermionegranger@example.com\"\n}",
+							"raw": "{\n    \"id\": 6883527,\n    \"name\": \"Hermione Granger\",\n    \"email\": \"hermionegranger@example.com\",\n    \"gender\": \"male\",\n    \"status\": \"active\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -285,7 +285,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://gorest.co.in/public/v2/users/6881840",
+							"raw": "https://gorest.co.in/public/v2/users/6883527",
 							"protocol": "https",
 							"host": [
 								"gorest",
@@ -296,7 +296,7 @@
 								"public",
 								"v2",
 								"users",
-								"6881840"
+								"6883527"
 							]
 						}
 					},
@@ -327,7 +327,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://gorest.co.in/public/v2/users/6881841",
+							"raw": "https://gorest.co.in/public/v2/users/6883532",
 							"protocol": "https",
 							"host": [
 								"gorest",
@@ -338,7 +338,7 @@
 								"public",
 								"v2",
 								"users",
-								"6881841"
+								"6883532"
 							]
 						}
 					},
@@ -365,7 +365,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://gorest.co.in/public/v2/users/6881842",
+							"raw": "https://gorest.co.in/public/v2/users/6883532",
 							"protocol": "https",
 							"host": [
 								"gorest",
@@ -376,7 +376,7 @@
 								"public",
 								"v2",
 								"users",
-								"6881842"
+								"6883532"
 							]
 						}
 					},

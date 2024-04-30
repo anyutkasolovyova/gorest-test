@@ -238,7 +238,7 @@ image::images/image-2024-04-29-23-14-58-396.png[width=500]
 [source,json]
 ----
 {
-    "name": "Harry Potter ",
+    "name": "Harry Potter",
     "email": "harrypotter@example.com",
     "gender": "male",
     "status": "active"
@@ -254,8 +254,8 @@ image::images/image-2024-04-29-23-14-58-396.png[width=500]
 [source,json]
 ----
 {
-    "id": 6881835,
-    "name": "Harry Potter ",
+    "id": 6883527,
+    "name": "Harry Potter",
     "email": "harrypotter@example.com",
     "gender": "male",
     "status": "active"
@@ -264,15 +264,15 @@ image::images/image-2024-04-29-23-14-58-396.png[width=500]
 
 === Сделайте скриншот.
 
-image::images/image-2024-04-29-23-38-04-849.png[width=500]
+image::images/image-2024-04-30-11-30-00-075.png[width=500]
 
 == Напишите запрос, возвращающий в ответе запись о созданном пользователе.
 
-`GET https://gorest.co.in/public/v2/users/6881835`
+`GET https://gorest.co.in/public/v2/users/6883527`
 
 === Сделайте скриншот.
 
-image::images/image-2024-04-29-23-39-42-869.png[width=500]
+image::images/image-2024-04-30-11-30-59-981.png[width=500]
 
 == Создайте еще несколько пользователей с одинаковыми значениями “name”, но разными email.
 
@@ -286,23 +286,23 @@ GET https://gorest.co.in/public/v2/users?page=1&per_page=3
 ----
 [
     {
-        "id": 6881842,
-        "name": "Harry Potter ",
-        "email": "prisonerofazkaban@example.com",
+        "id": 6883534,
+        "name": "Harry Potter",
+        "email": "chamberofsecrets@example.com",
         "gender": "male",
         "status": "active"
     },
     {
-        "id": 6881841,
-        "name": "Harry Potter ",
+        "id": 6883533,
+        "name": "Harry Potter",
         "email": "gobletoffire@example.com",
         "gender": "male",
         "status": "active"
     },
     {
-        "id": 6881840,
-        "name": "Harry Potter ",
-        "email": "chamberofsecrets@example.com",
+        "id": 6883532,
+        "name": "Harry Potter",
+        "email": "prisonerofazkaban@example.com",
         "gender": "male",
         "status": "active"
     }
@@ -311,37 +311,40 @@ GET https://gorest.co.in/public/v2/users?page=1&per_page=3
 
 === Сделайте скриншот.
 
-image::images/image-2024-04-29-23-49-02-685.png[width=500]
+image::images/image-2024-04-30-11-34-12-518.png[width=500]
 
 === Какими ещё get запросами можно получить запись о пользователе?
 
 Помимо поиска по id пользователя, можно настроить поиск:
 
-* по адресу электронной почты `GET https://gorest.co.in/public/v2/users?email=chamberofsecrets@example.com`
-* по имени пользователя `GET https://gorest.co.in/public/v2/users?name=Harry Potter `
+* по адресу электронной почты `GET https://gorest.co.in/public/v2/users?email=chamberofsecrets+++@+++example.com`
+* по имени пользователя `GET https://gorest.co.in/public/v2/users?name=Harry+++ +++Potter`
 * по статусу пользователя (у нас это "active" и "inactive" ) `GET https://gorest.co.in/public/v2/users?status=active`
 * по полу ("male", "female") `GET https://gorest.co.in/public/v2/users?gender=male`
 
 == Напишите запрос с методом put на изменение email и name на другое значение.
 
-`PUT https://gorest.co.in/public/v2/users/6881840`
+`PUT https://gorest.co.in/public/v2/users/6883527`
 
 [source,json]
 ----
 {
+    "id": 6883527,
     "name": "Hermione Granger",
-    "email": "hermionegranger@example.com"
+    "email": "hermionegranger@example.com",
+    "gender": "male",
+    "status": "active"
 }
 ----
 
 === Проверьте изменение get запросом.
 
-`GET https://gorest.co.in/public/v2/users/6881840`
+`GET https://gorest.co.in/public/v2/users/6883527`
 
 [source,json]
 ----
 {
-    "id": 6881840,
+    "id": 6883527,
     "name": "Hermione Granger",
     "email": "hermionegranger@example.com",
     "gender": "male",
@@ -351,7 +354,7 @@ image::images/image-2024-04-29-23-49-02-685.png[width=500]
 
 === Сделайте скриншот.
 
-image::images/image-2024-04-30-00-01-14-104.png[width=500]
+image::images/image-2024-04-30-11-38-49-791.png[width=500]
 
 == Чем отличаются запросы put и patch?
 
@@ -359,7 +362,7 @@ image::images/image-2024-04-30-00-01-14-104.png[width=500]
 
 === Напишите запрос с методом patch для корректировки полей status и email.
 
-`PATCH https://gorest.co.in/public/v2/users/6881841`
+`PATCH https://gorest.co.in/public/v2/users/6883532`
 
 [source,json]
 ----
@@ -371,15 +374,15 @@ image::images/image-2024-04-30-00-01-14-104.png[width=500]
 
 === Сделайте скриншот.
 
-image::images/image-2024-04-30-00-04-03-844.png[width=500]
+image::images/image-2024-04-30-11-40-05-368.png[width=500]
 
 === В чем отличие полученного результата, от результата запроса из п.8?
 
-TODO
+В пункте 8 при использовании метода PUT мы передавали все тело в запросе, даже те части, которые остались неизменными. Для метода PATCH достаточно было передать только те поля, которые мы собирались изменить.
 
 == Удалите пользователя, созданного в п.5.
 
-`DELETE https://gorest.co.in/public/v2/users/6881835`
+`DELETE https://gorest.co.in/public/v2/users/6883527`
 
 === Что содержится в теле ответа?
 
@@ -387,11 +390,11 @@ TODO
 
 === Сделайте скриншот.
 
-image::images/image-2024-04-30-00-05-39-363.png[width=500]
+image::images/image-2024-04-30-11-44-17-419.png[width=500]
 
 === Выполните get запрос удаленного пользователя.
 
-`GET https://gorest.co.in/public/v2/users/6881835`
+`GET https://gorest.co.in/public/v2/users/6883527`
 
 === Какой ответ пришел и почему?
 
@@ -406,7 +409,7 @@ image::images/image-2024-04-30-00-05-39-363.png[width=500]
 
 === Сделайте скриншот.
 
-image::images/image-2024-04-30-00-07-23-033.png[width=500]
+image::images/image-2024-04-30-11-45-06-072.png[width=500]
 
 == Удалите всех ранее созданных пользователей.
 
@@ -418,30 +421,30 @@ image::images/image-2024-04-30-00-07-23-033.png[width=500]
 ----
 [
     {
-        "id": 6880239,
-        "name": "Rahul Sethi",
-        "email": "rahul_sethi@mosciski.test",
+        "id": 6880198,
+        "name": "Bhaanumati Khanna",
+        "email": "khanna_bhaanumati@lubowitz.test",
         "gender": "male",
+        "status": "inactive"
+    },
+    {
+        "id": 6880197,
+        "name": "Vishnu Saini",
+        "email": "saini_vishnu@nolan.example",
+        "gender": "female",
         "status": "active"
     },
     {
-        "id": 6880238,
-        "name": "Devdan Malik",
-        "email": "devdan_malik@ferry.example",
+        "id": 6880195,
+        "name": "Satish Johar Jr.",
+        "email": "jr_johar_satish@labadie.example",
         "gender": "male",
-        "status": "inactive"
-    },
-    {
-        "id": 6880237,
-        "name": "Bodhan Reddy Esq.",
-        "email": "esq_bodhan_reddy@kunze-champlin.test",
-        "gender": "male",
-        "status": "inactive"
+        "status": "active"
     }
 ]
 ----
 
-image::images/image-2024-04-30-00-11-08-755.png[width=500]
+image::images/image-2024-04-30-11-47-02-416.png[width=500]
 
 == Сохраните коллекцию получившихся запросов в Postman.
 
